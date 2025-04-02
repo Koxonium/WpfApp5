@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel
+            Name="everything"
+            Background="#133"
+            Grid.Column="2"
+            Grid.RowSpan="5"/>
+        <Label Content="Gyártó: "
+               Grid.Row="0"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center" FontSize="30"/>
+        <TextBox Background="AliceBlue" Name="ManufacturerInput" Grid.Row="0" Grid.Column="1" Margin="20 10" Padding="5"/>
+        <Label Content="Modell: "
+               Grid.Row="1"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center" FontSize="30"/>
+        <TextBox Background="AliceBlue" Name="ModelInput" Grid.Row="1" Grid.Column="1" Margin="20 10" Padding="5"/>
+        <Label Content="Teljesítmény (Le): "
+               Grid.Row="2"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center" FontSize="30"/>
+        <TextBox Background="AliceBlue" Name="PowerInput" Grid.Row="2" Grid.Column="1" Margin="20 10" Padding="5"/>
+        <Label Content="Súly (kg): "
+               Grid.Row="3"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center" FontSize="30"/>
+        <TextBox Background="AliceBlue" Name="WInput" Grid.Row="3" Grid.Column="1" Margin="20 10" Padding="5"/>
+        <Button Background="Gray" Name="CreateButton" Click="CreateEvent" Grid.Column="0"
+                Grid.Row="4"
+                FontSize="30"
+                Content="Létrehozás"/>
+        <Button Background="Gray" Name="EditButton" Click="EditEvent" Grid.Column="1"
+                Grid.Row="4"
+                FontSize="30"
+                Content="Módosítás"
+                IsEnabled="False"/>
+    </Grid>
+</Window>
