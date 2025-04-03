@@ -27,6 +27,7 @@ namespace WpfApp5
             InitializeComponent();
             manager = new FileManager("data.txt");
             Start();
+            masik();
         }
 
         void Start()
@@ -40,6 +41,46 @@ namespace WpfApp5
                 oneLabel.MouseRightButtonUp += LoadInto;
                 everything.Children.Add(oneLabel);
             }
+        }
+
+        void masik()
+        {
+            List<object> asd = new List<object>();
+
+            asd.Add(10);
+            asd.Add("kolbasz");
+            asd.Add(true);
+            asd.Add('c');
+            asd.Add(66.66);
+            asd.Add(new TextBox());
+            asd.Add(new Label() { Content="asd"});
+
+
+            /*asd.Add(new Fa { nev="Fa", faanyag="Tölgy", kemenyseg=4132.4, suly=500.5, ar=12000 });
+
+            asd.Add(new Vas { nev="Acél", ar=25000, suly=20, femtipus="Rozsdamentes acél", suruseg=321.32});
+
+            asd.Add(new Tegla { nev="Piros tégla", ar = 5500, suly=50, szin="Piros", teglatipus="Tört"});*/
+
+
+            /*foreach (epitoanyag item in asd)
+            {
+                if (item is Tegla)
+                {
+                    MessageBox.Show($"Név: {(item as Tegla).nev }, tipus: {(item as Tegla).teglatipus}");
+                }
+                else if (item is Fa)
+                {
+                    MessageBox.Show($"Név: {(item as Fa).nev }, tipus: {(item as Fa).faanyag}");
+                }
+                else if (item is Vas)
+                {
+                    MessageBox.Show($"Név: {(item as Vas).nev }, tipus: {(item as Vas).femtipus}");
+                }
+                item.ar += 50;
+            }*/
+
+            
         }
 
         void CarClick(object sender, EventArgs e)
